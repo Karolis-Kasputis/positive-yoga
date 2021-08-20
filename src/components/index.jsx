@@ -1,3 +1,3 @@
 export * from "./Floater";
-export * from "./NavBar";
-export * from "./PlansAndPricing";
+export * from "./Header";
+export * from "./Details";

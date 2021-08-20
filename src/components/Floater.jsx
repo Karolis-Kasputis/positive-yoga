@@ -1,9 +1,14 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { IoMdPricetag } from "react-icons/io";
+import { Text, H5 } from "../styles";
 
 const FloaterContainer = styled.div`
+  position: sticky;
+  top: 0;
+  z-index: 10;
   display: flex;
+  height: 3.5rem;
   padding: 1.25rem;
   justify-content: center;
   align-items: center;
@@ -17,11 +22,6 @@ const PriceTag = styled(IoMdPricetag)`
   transform: scaleX(-1);
   font-size: 1.25rem;
   margin-right: 0.5rem;
-`;
-
-const BoldText = styled.span`
-  white-space: pre;
-  font-weight: 600;
 `;
 
 export const Floater = ({ initialSeconds: initialTotalSeconds = 300 }) => {
@@ -45,11 +45,13 @@ export const Floater = ({ initialSeconds: initialTotalSeconds = 300 }) => {
   return (
     <FloaterContainer>
       <PriceTag />
-      <BoldText>50%{` `}</BoldText> discount only valid for
-      <BoldText>
-        {` `}
-        {hours}:{minutes}:{seconds}
-      </BoldText>
+      <H5>
+        <Text bold>50%</Text> discount only valid for
+        <Text bold>
+          {` `}
+          {hours}:{minutes}:{seconds}
+        </Text>
+      </H5>
     </FloaterContainer>
   );
 };
