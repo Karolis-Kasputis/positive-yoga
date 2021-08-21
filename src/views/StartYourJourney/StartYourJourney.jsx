@@ -6,7 +6,7 @@ import { ReactComponent as MobileScreens } from "./svg/mobileScreens.svg";
 const Wrapper = styled.div`
   position: relative;
   display: flex;
-  width: 100%;
+  max-width: 700px;
   flex-direction: column;
   padding: 0.875rem;
   overflow: hidden;
@@ -22,8 +22,7 @@ const Stripe = styled.div`
 
   background: #ebebeb;
   transform: matrix(2, 1, -7, 2, 80, 90);
-  overflow: hidden;
-  @media (min-width: 769px) {
+  @media (min-width: 375px) {
     display: none;
   }
 `;

@@ -8,6 +8,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   gap: 0.5rem;
   padding: 0.875rem;
+  max-width: 750px;
 `;
 
 export const FAQ = () => (

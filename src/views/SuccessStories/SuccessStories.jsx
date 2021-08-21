@@ -7,18 +7,19 @@ import { fakeData } from "./fakeData";
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding-block: 0.75rem;
 `;
 
 const CardListWrapper = styled.div`
   display: flex;
-  z-index: 100;
+  justify-content: center;
   align-items: stretch;
   flex-wrap: nowrap;
   gap: 0.875rem;
   padding: 1rem;
   padding-bottom: 3rem;
-  overflow-x: scroll;
+  overflow-x: auto;
 `;
 
 export const SuccessStories = () => (

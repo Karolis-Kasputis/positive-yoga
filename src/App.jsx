@@ -14,19 +14,33 @@ import {
 const Header = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
   padding: 0.875rem;
+  text-align: center;
+
+  @media (max-width: 769px) {
+    text-align: left;
+  }
 `;
 
 const ResponsiveWrapper = styled.div`
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   @media (max-width: 769px) {
     flex-direction: column;
+    align-items: center;
   }
 `;
 
+const AppWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
 const App = () => (
-  <div>
+  <AppWrapper>
     <Floater />
     <NavBar />
     <Header>
@@ -39,17 +53,20 @@ const App = () => (
       <PlansAndPricing />
       <ProgramContent />
     </ResponsiveWrapper>
-
     <SuccessStories />
-    <IsPositiveYogaRight />
-    <StartYourJourney />
+    <ResponsiveWrapper>
+      <IsPositiveYogaRight />
+      <StartYourJourney />
+    </ResponsiveWrapper>
     <FAQ />
     <Header>
       <H2>Start your yoga program today!</H2>
     </Header>
-    <PlansAndPricing />
-    <ProgramContent />
-  </div>
+    <ResponsiveWrapper>
+      <PlansAndPricing />
+      <ProgramContent />
+    </ResponsiveWrapper>
+  </AppWrapper>
 );
 
 export default App;

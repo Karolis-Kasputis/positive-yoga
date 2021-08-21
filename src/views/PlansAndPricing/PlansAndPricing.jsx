@@ -7,8 +7,14 @@ import { Text, H2, H3, H5, Chip, Button, Caption } from "../../styles";
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  justify-content: center;
+  max-width: 375px;
+  gap: 1.125rem;
   padding: 0.875rem;
+`;
+
+const SafeCheckout = styled(GuaranteedSafeCheckout)`
+  width: 100%;
 `;
 
 export const PlansAndPricing = () => {
@@ -100,7 +106,7 @@ export const PlansAndPricing = () => {
         <a href="https://www.google.com/">T&Cs</a> and{" "}
         <a href="https://www.google.com/">Privacy Policy</a>
       </Caption>
-      <GuaranteedSafeCheckout />
+      <SafeCheckout />
     </Wrapper>
   );
 };

@@ -7,6 +7,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0.875rem;
+  max-width: 375px;
   gap: 1.125rem;
 `;
 

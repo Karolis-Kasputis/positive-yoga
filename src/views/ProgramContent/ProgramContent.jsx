@@ -15,6 +15,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   gap: 0.875rem;
   padding: 1rem;
+  max-width: 375px;
 `;
 
 export const ProgramContent = () => (

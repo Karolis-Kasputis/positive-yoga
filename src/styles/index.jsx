@@ -57,9 +57,11 @@ export const H3 = styled.h3`
   font-weight: bold;
   font-size: 24px;
   line-height: 32px;
+  text-align: center;
   /* or 133% */
 
   @media (max-width: 480px) {
+    text-align: ;
     font-size: 20px;
     line-height: 28px;
   }
@@ -145,6 +147,7 @@ export const Button = styled.button.attrs(({ type = "button", ...rest }) => ({
 }))`
   padding: ${({ padding }) => padding};
   margin: ${({ margin }) => margin};
+  max-width: 350px;
   display: flex;
   flex-direction: row;
   justify-content: center;
