@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
 import { Floater, NavBar } from "./components";
 import { P, H1, H2 } from "./styles";
@@ -11,20 +11,31 @@ import {
   SuccessStories
 } from "./views";
 
-const Header = styled.div`
+const HeaderWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0.875rem;
+  gap: 0.75rem;
+  padding-inline: 0.875rem;
   text-align: center;
 
-  @media (max-width: 960px) {
+  @media (max-width: 900px) {
+    max-width: 375px;
+    gap: 0.5rem;
     text-align: left;
   }
 `;
 
+const ResponsiveP = styled(P)`
+  @media (min-width: 450px) {
+    margin-top: 2rem;
+  }
+`;
+
 const ResponsiveWrapper = styled.div`
+  width: 100%;
   display: flex;
+  margin-block: 1.5rem;
   flex-direction: row;
   justify-content: center;
   @media (max-width: 960px) {
@@ -38,36 +49,41 @@ const AppWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 6rem;
 `;
 
-const App = () => (
-  <AppWrapper>
-    <Floater />
-    <NavBar />
-    <Header>
-      <P small margin="2rem 0 0 0">
-        Over <b>234234</b> plans ordered.
-      </P>
-      <H1>Get access to your yoga program now!</H1>
-    </Header>
-    <ResponsiveWrapper>
-      <PlansAndPricing />
-      <ProgramContent />
-    </ResponsiveWrapper>
-    <SuccessStories />
-    <ResponsiveWrapper mobileColumnReverse>
-      <StartYourJourney />
-      <IsPositiveYogaRight />
-    </ResponsiveWrapper>
-    <FAQ />
-    <Header>
-      <H2>Start your yoga program today!</H2>
-    </Header>
-    <ResponsiveWrapper>
-      <PlansAndPricing />
-      <ProgramContent />
-    </ResponsiveWrapper>
-  </AppWrapper>
-);
+const App = () => {
+  const startYourProgramRef = useRef(null);
+
+  return (
+    <AppWrapper>
+      <Floater />
+      <NavBar />
+      <HeaderWrapper>
+        <ResponsiveP small>
+          Over <b>52 147</b> plans ordered.
+        </ResponsiveP>
+        <H1>Get access to your yoga program now!</H1>
+      </HeaderWrapper>
+      <ResponsiveWrapper>
+        <PlansAndPricing />
+        <ProgramContent />
+      </ResponsiveWrapper>
+      <SuccessStories startYourProgramRef={startYourProgramRef} />
+      <ResponsiveWrapper mobileColumnReverse>
+        <StartYourJourney />
+        <IsPositiveYogaRight />
+      </ResponsiveWrapper>
+      <FAQ startYourProgramRef={startYourProgramRef} />
+      <HeaderWrapper ref={startYourProgramRef}>
+        <H2>Start your yoga program today!</H2>
+      </HeaderWrapper>
+      <ResponsiveWrapper>
+        <PlansAndPricing />
+        <ProgramContent />
+      </ResponsiveWrapper>
+    </AppWrapper>
+  );
+};
 
 export default App;

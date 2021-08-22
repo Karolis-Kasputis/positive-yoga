@@ -3,7 +3,7 @@ import EmilyPic from "./pics/Emily.png";
 import JesicaPic from "./pics/Jesica.png";
 import KyliePic from "./pics/Kylie.png";
 
-export const fakeData = [
+export const data = [
   {
     nameAndAge: "Emily, 28",
     location: "Los Angeles",

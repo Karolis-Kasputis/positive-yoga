@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { ReactComponent as GuaranteedSafeCheckout } from "./svg/guaranteedSafeCheckout.svg";
-import { PricePlanButton } from "./PricePlanButton";
+import { PlanSelectButton } from "./PlanSelectButton";
 import { Text, H2, H3, H5, Chip, Button, Caption } from "../../styles";
 
 const Wrapper = styled.div`
@@ -17,14 +17,14 @@ const SafeCheckout = styled(GuaranteedSafeCheckout)`
   width: 100%;
 `;
 
-export const PlansAndPricing = () => {
+export const PlansAndPricing = React.forwardRef((_, ref) => {
   const [selectedPlan, setSelectedPlan] = useState(1);
   return (
-    <Wrapper>
+    <Wrapper ref={ref}>
       <H3>
         Choose your plan and get <Text color="primary">7 days free trial</Text>
       </H3>
-      <PricePlanButton
+      <PlanSelectButton
         selected={selectedPlan === 1}
         onClick={() => setSelectedPlan(1)}
       >
@@ -51,8 +51,8 @@ export const PlansAndPricing = () => {
           </Text>
           billed every 6 months
         </div>
-      </PricePlanButton>
-      <PricePlanButton
+      </PlanSelectButton>
+      <PlanSelectButton
         selected={selectedPlan === 2}
         onClick={() => setSelectedPlan(2)}
       >
@@ -77,8 +77,8 @@ export const PlansAndPricing = () => {
           </Text>
           billed every 3 months
         </div>
-      </PricePlanButton>
-      <PricePlanButton
+      </PlanSelectButton>
+      <PlanSelectButton
         selected={selectedPlan === 3}
         onClick={() => setSelectedPlan(3)}
       >
@@ -92,7 +92,7 @@ export const PlansAndPricing = () => {
         <div>
           <Text fontSize="0.875rem">Billed monthly</Text>
         </div>
-      </PricePlanButton>
+      </PlanSelectButton>
       <Button onClick={() => alert(`Selected plan: ${selectedPlan}`)}>
         Get your Plan
       </Button>
@@ -109,4 +109,4 @@ export const PlansAndPricing = () => {
       <SafeCheckout />
     </Wrapper>
   );
-};
+});

@@ -57,11 +57,9 @@ export const H3 = styled.h3`
   font-weight: bold;
   font-size: 24px;
   line-height: 32px;
-  text-align: center;
   /* or 133% */
 
   @media (max-width: 480px) {
-    text-align: ;
     font-size: 20px;
     line-height: 28px;
   }
@@ -154,13 +152,17 @@ export const Button = styled.button.attrs(({ type = "button", ...rest }) => ({
   color: white;
   border: none;
 
+  transition-property: all;
+  transition-timing-function: ease-out;
+  transition-duration: 150ms;
+
   :hover {
-    background: #e68c46;
+    background: #e66400;
   }
   :focus {
-    background: #cc7c3e;
+    background: #e66400;
   }
   :active {
-    background: #b36d37;
+    background: #ff7d1a;
   }
 `;

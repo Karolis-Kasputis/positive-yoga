@@ -10,6 +10,11 @@ const DetailsWrapper = styled.div`
   padding: 1rem;
   border: 2px solid rgba(0, 0, 0, 0.08);
   border-radius: 1rem;
+  * {
+    transition-property: all;
+    transition-timing-function: ease-out;
+    transition-duration: 150ms;
+  }
 `;
 const TitleWrapper = styled.div`
   display: flex;

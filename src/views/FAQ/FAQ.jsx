@@ -1,18 +1,24 @@
 import React from "react";
 import styled from "styled-components";
 import { Details } from "../../components";
-import { H3 } from "../../styles";
+import { H3, Button } from "../../styles";
 
 const Wrapper = styled.div`
   display: flex;
   width: 100%;
   flex-direction: column;
   gap: 0.5rem;
-  padding: 0.875rem;
+  padding-block: 1.5rem;
+  padding-inline: 0.875rem;
   max-width: 750px;
 `;
 
-export const FAQ = () => (
+const PositionedButton = styled(Button)`
+  margin-top: 3rem;
+  align-self: center;
+`;
+
+export const FAQ = ({ startYourProgramRef }) => (
   <Wrapper>
     <H3>Frequently Asked Questions</H3>
     <Details
@@ -32,5 +38,11 @@ Based on the questions you answered in the quiz, we’ll craft your personal pla
       title="Why this program is paid?"
       description="We are aiming to offer our clients the best experience, which comes with a lot of work.  The entire yoga program is developed by our large team of experts that work long hours to prepare effective, trustworthy and enjoyable content and workouts that can help you to reach your goals. The program is also completely free of ads and is constantly being updated based on your feedback! "
     />
+
+    <PositionedButton
+      onClick={() => startYourProgramRef?.current?.scrollIntoView()}
+    >
+      Get my Plan
+    </PositionedButton>
   </Wrapper>
 );

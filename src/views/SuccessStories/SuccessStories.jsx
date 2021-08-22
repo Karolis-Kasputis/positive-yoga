@@ -2,40 +2,36 @@ import React from "react";
 import styled from "styled-components";
 import { H3, Button } from "../../styles";
 import { StoryCard } from "./StoryCard";
-import { fakeData } from "./fakeData";
+import { data } from "./data";
 
 const Wrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-block: 0.75rem;
-
-  @media (max-width: 960px) {
-    width: 375px;
-  }
+  padding-block: 1.5rem;
 `;
 
 const CardListWrapper = styled.div`
-  display: flex;
   width: 100%;
-  max-width: 960px;
-  justify-content: center;
-  align-items: stretch;
-  align-content: stretch;
+  display: flex;
   flex-wrap: nowrap;
   gap: 0.875rem;
-  padding: 1rem;
-  padding-bottom: 3rem;
+  padding-inline: 1rem;
+  padding-block: 1.5rem;
   margin-bottom: 1rem;
   overflow-x: auto;
+
+  @media (min-width: 450px) {
+    justify-content: center;
+  }
 `;
 
-export const SuccessStories = () => (
+export const SuccessStories = ({ startYourProgramRef }) => (
   <Wrapper>
-    <H3 padding="0.875rem">Hear success stories from our clients</H3>
+    <H3 padding="">Hear success stories from our clients</H3>
     <CardListWrapper>
-      {fakeData.map((data) => (
+      {data.map((data) => (
         <StoryCard
           key={data.nameAndAge}
           nameAndAge={data.nameAndAge}
@@ -46,7 +42,10 @@ export const SuccessStories = () => (
         />
       ))}
     </CardListWrapper>
-    <Button margin="0 1rem" onClick={() => console.log("wut")}>
+    <Button
+      margin="0 1rem"
+      onClick={() => startYourProgramRef?.current?.scrollIntoView()}
+    >
       Get my plan
     </Button>
   </Wrapper>

@@ -32,7 +32,7 @@ export const StoryCard = ({ nameAndAge, location, rating, pic, review }) => (
         <StarIcon />
       ))}
     </RatingWrapper>
-    <img src={pic} alt="Emily" height="200px" width="200px" />
+    <img src={pic} alt="Emily" height="150px" width="150px" />
     <P padding="1rem 0">
       {review.map((textOrHtml, i) => (
         // eslint-disable-next-line
