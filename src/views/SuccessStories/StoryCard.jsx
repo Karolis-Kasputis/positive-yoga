@@ -9,8 +9,9 @@ const StarIcon = styled(FaStar)`
 const CardWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 20rem;
-  min-width: 20rem;
+  width: 100%;
+  min-width: 16rem;
+  max-width: 19rem;
   padding: 1rem;
   box-shadow: 0px 16px 32px rgba(57, 53, 60, 0.08);
   border-radius: 16px;

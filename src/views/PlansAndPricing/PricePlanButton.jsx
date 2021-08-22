@@ -11,6 +11,16 @@ const Wrapper = styled.div`
   border: ${({ selected }) =>
     selected ? `2px #ff9b4e solid` : "2px solid rgba(0, 0, 0, 0.08)"};
   border-radius: 1rem;
+
+  :hover {
+    border-color: #e68c46;
+  }
+  :focus {
+    border-color: #cc7c3e;
+  }
+  :active {
+    border-color: #b36d37;
+  }
 `;
 const FlexCol = styled.div`
   display: flex;
@@ -20,10 +30,30 @@ const FlexCol = styled.div`
 
 const CircleIcon = styled(FaCircle)`
   font-size: 1.25rem;
+
+  :hover {
+    border-color: #e68c46;
+  }
+  :focus {
+    border-color: #cc7c3e;
+  }
+  :active {
+    border-color: #b36d37;
+  }
   color: rgba(0, 0, 0, 0.08);
 `;
 const CheckIcon = styled(FaCheckCircle)`
   font-size: 1.25rem;
+
+  &&:hover {
+    border-color: #e68c46;
+  }
+  &&:focus {
+    border-color: #cc7c3e;
+  }
+  &&:active {
+    border-color: #b36d37;
+  }
   color: #ff9b4e;
 `;
 

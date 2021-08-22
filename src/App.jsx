@@ -18,7 +18,7 @@ const Header = styled.div`
   padding: 0.875rem;
   text-align: center;
 
-  @media (max-width: 769px) {
+  @media (max-width: 960px) {
     text-align: left;
   }
 `;
@@ -27,8 +27,9 @@ const ResponsiveWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  @media (max-width: 769px) {
-    flex-direction: column;
+  @media (max-width: 960px) {
+    flex-direction: ${({ mobileColumnReverse }) =>
+      mobileColumnReverse ? "column-reverse" : "column"};
     align-items: center;
   }
 `;
@@ -44,7 +45,7 @@ const App = () => (
     <Floater />
     <NavBar />
     <Header>
-      <P small>
+      <P small margin="2rem 0 0 0">
         Over <b>234234</b> plans ordered.
       </P>
       <H1>Get access to your yoga program now!</H1>
@@ -54,9 +55,9 @@ const App = () => (
       <ProgramContent />
     </ResponsiveWrapper>
     <SuccessStories />
-    <ResponsiveWrapper>
-      <IsPositiveYogaRight />
+    <ResponsiveWrapper mobileColumnReverse>
       <StartYourJourney />
+      <IsPositiveYogaRight />
     </ResponsiveWrapper>
     <FAQ />
     <Header>

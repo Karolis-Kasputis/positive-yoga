@@ -5,6 +5,7 @@ import { H3 } from "../../styles";
 
 const Wrapper = styled.div`
   display: flex;
+  width: 100%;
   flex-direction: column;
   gap: 0.5rem;
   padding: 0.875rem;

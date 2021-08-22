@@ -76,8 +76,6 @@ export const H5 = styled.h5`
   font-size: 16px;
   line-height: 24px;
 
-  // letter-spacing: -0.4px;
-
   @media (max-width: 480px) {
     font-size: 15px;
     line-height: 20px;
@@ -85,30 +83,23 @@ export const H5 = styled.h5`
 `;
 
 export const P = styled.p`
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: normal;
+  color: #22222c;
   padding: ${({ padding }) => padding};
   margin: ${({ margin }) => margin};
   ${({ small }) =>
     small &&
     `
-		font-family: SF Pro Text;
-		font-style: normal;
-		font-weight: normal;
 		font-size: 14px;
 		line-height: 20px;
-		/* identical to box height, or 143% */
-		color: #22222C;
-
 	`}
   ${({ regular = true }) =>
     regular &&
     `
-		font-family: SF Pro Text;
-    font-style: normal;
-    font-weight: normal;
     font-size: 16px;
     line-height: 24px;
-		color: #22222C;
-
 	`}
 `;
 
@@ -120,6 +111,7 @@ export const Caption = styled.p`
   font-weight: normal;
   font-size: 12px;
   line-height: 18px;
+
   @media (max-width: 480px) {
     font-size: 12px;
     line-height: 18px;
@@ -147,6 +139,7 @@ export const Button = styled.button.attrs(({ type = "button", ...rest }) => ({
 }))`
   padding: ${({ padding }) => padding};
   margin: ${({ margin }) => margin};
+  width: 100%;
   max-width: 350px;
   display: flex;
   flex-direction: row;
@@ -162,6 +155,12 @@ export const Button = styled.button.attrs(({ type = "button", ...rest }) => ({
   border: none;
 
   :hover {
-    background: #ff9b4e;
+    background: #e68c46;
+  }
+  :focus {
+    background: #cc7c3e;
+  }
+  :active {
+    background: #b36d37;
   }
 `;
