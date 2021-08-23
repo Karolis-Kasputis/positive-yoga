@@ -19,7 +19,7 @@ const CardWrapper = styled.div`
 
 const RatingWrapper = styled.div`
   display: flex;
-  padding-block: 1rem;
+  padding: 1rem 0;
   font-size: 1.25rem;
 `;
 

@@ -20,8 +20,6 @@ export const H1 = styled.h1`
   font-weight: 800;
   font-size: 40px;
   line-height: 56px;
-  /* identical to box height, or 140% */
-
   text-align: center;
   color: #000000;
 
@@ -29,7 +27,6 @@ export const H1 = styled.h1`
     text-align: left;
     font-size: 28px;
     line-height: 36px;
-    /* or 129% */
   } ;
 `;
 
@@ -42,6 +39,7 @@ export const H2 = styled.h2`
   font-weight: bold;
   font-size: 32px;
   line-height: 44px;
+
   @media (max-width: 480px) {
     font-size: 24px;
     line-height: 32px;
@@ -57,7 +55,6 @@ export const H3 = styled.h3`
   font-weight: bold;
   font-size: 24px;
   line-height: 32px;
-  /* or 133% */
 
   @media (max-width: 480px) {
     font-size: 20px;

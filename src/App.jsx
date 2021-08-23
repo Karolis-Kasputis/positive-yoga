@@ -16,7 +16,7 @@ const HeaderWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 0.75rem;
-  padding-inline: 0.875rem;
+  padding: 0 0.875rem;
   text-align: center;
 
   @media (max-width: 900px) {
@@ -35,7 +35,7 @@ const ResponsiveP = styled(P)`
 const ResponsiveWrapper = styled.div`
   width: 100%;
   display: flex;
-  margin-block: 1.5rem;
+  margin: 1.5rem 0;
   flex-direction: row;
   justify-content: center;
   @media (max-width: 960px) {

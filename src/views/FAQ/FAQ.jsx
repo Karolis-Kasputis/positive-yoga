@@ -8,8 +8,7 @@ const Wrapper = styled.div`
   width: 100%;
   flex-direction: column;
   gap: 0.5rem;
-  padding-block: 1.5rem;
-  padding-inline: 0.875rem;
+  padding: 1.5rem 0.875;
   max-width: 750px;
 `;
 

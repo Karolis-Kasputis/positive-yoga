@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-block: 1.5rem;
+  padding: 1.5rem 0;
 `;
 
 const CardListWrapper = styled.div`
@@ -17,8 +17,7 @@ const CardListWrapper = styled.div`
   display: flex;
   flex-wrap: nowrap;
   gap: 0.875rem;
-  padding-inline: 1rem;
-  padding-block: 1.5rem;
+  padding: 1.5rem 1rem;
   margin-bottom: 1rem;
   overflow-x: auto;
 

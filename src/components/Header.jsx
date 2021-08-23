@@ -4,8 +4,7 @@ import { ReactComponent as YogaLogo } from "../svg/yogaLogo.svg";
 
 const FloaterContainer = styled.div`
   display: flex;
-  margin-inline: 0.875rem;
-  margin-block: 1.5rem;
+  margin: 1.5rem 0.875rem;
   justify-content: center;
   background-color: #ffffff;
   color: white;
