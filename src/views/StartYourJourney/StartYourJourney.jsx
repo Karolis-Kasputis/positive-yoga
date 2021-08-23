@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { H3 } from "../../styles";
-import { ReactComponent as MobileScreensSvg } from "./svg/mobileScreens.svg";
+import mobileScreens from "./pics/mobileScreens.png";
 
 const Wrapper = styled.div`
   position: relative;
@@ -29,7 +29,10 @@ const Stripe = styled.div`
   }
 `;
 
-const MobileScreens = styled(MobileScreensSvg)`
+const MobileScreens = styled.img.attrs({
+  src: mobileScreens,
+  alt: "Mobile Screens"
+})`
   max-width: 460px;
 `;
 
